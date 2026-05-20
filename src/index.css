@@ -713,16 +713,30 @@
 
   /* Responsive */
   @media (max-width: 900px) {
+    .cp-section {
+      padding: 80px 0 100px;
+    }
+
     .cp-left {
       width: 100%;
+      flex: none;
+    }
+
+    /* Critical: force right column to wrap below left column */
+    .cp-right {
+      width: 100%;
+      flex: none;
     }
 
     .cp-map {
-      min-height: 320px;
+      flex: none;
+      height: 360px;
+      min-height: unset;
     }
 
     .cp-map iframe {
-      min-height: 320px;
+      height: 360px;
+      min-height: unset;
     }
 
     .cp-info-blocks {
@@ -736,6 +750,7 @@
 
     .cp-form-wrap {
       padding: 3.5rem 0 0;
+      max-width: 100%;
     }
   }
 
@@ -753,7 +768,31 @@
       left: 1rem;
     }
 
+    .cp-section {
+      padding: 60px 0 80px;
+    }
+
+    .cp-map {
+      height: 260px;
+    }
+
+    .cp-map iframe {
+      height: 260px;
+    }
+
+    .cp-info-blocks {
+      flex-direction: column;
+    }
+
     .cp-info-block {
+      width: 100%;
+    }
+
+    .cp-form-heading {
+      font-size: 2rem;
+    }
+
+    .cp-submit-btn {
       width: 100%;
     }
   }

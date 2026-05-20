@@ -150,7 +150,7 @@ export default function Hero() {
       </div>
 
       {/* Search bar + counter — stable, not remounted on slide change */}
-      <div className="absolute bottom-20 left-0 right-0 z-20 px-6 max-w-7xl mx-auto">
+      <div className="absolute bottom-16 left-0 right-0 z-20 px-6 max-w-7xl mx-auto hidden sm:block">
         {/* Search bar */}
         <div
           className="bg-white/10 backdrop-blur-md border border-white/10 p-1 flex flex-col md:flex-row max-w-3xl mb-10 animate-fadeUp"
@@ -214,8 +214,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Right-side vertical prev/next controls */}
-      <div className="absolute right-24 top-1/2 -translate-y-1/2 z-20 flex flex-col items-center gap-5">
+      {/* Right-side vertical prev/next controls — hidden on mobile */}
+      <div className="absolute right-24 top-1/2 -translate-y-1/2 z-20 hidden md:flex flex-col items-center gap-5">
         <button
           onClick={() => goTo((current - 1 + slides.length) % slides.length)}
           className="text-white/40 hover:text-white text-[9px] tracking-[0.3em] uppercase font-sans font-medium transition-colors duration-300"
@@ -233,8 +233,8 @@ export default function Hero() {
         </button>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
+      {/* Scroll indicator — hidden on mobile */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 hidden sm:flex flex-col items-center gap-2">
         <span className="text-white/25 text-[9px] tracking-[0.5em] uppercase font-sans">Scroll</span>
         <div className="w-px h-10 bg-white/15 relative overflow-hidden">
           <div className="absolute inset-x-0 top-0 h-full bg-gold animate-[slideDown_1.5s_ease_infinite]" />
