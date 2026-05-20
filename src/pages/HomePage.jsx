@@ -1,5 +1,6 @@
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import Hero from '../components/Hero'
+import BrandStrip from '../components/BrandStrip'
 import FeaturedProperties from '../components/FeaturedProperties'
 import About from '../components/About'
 import Services from '../components/Services'
@@ -14,6 +15,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <BrandStrip />
       <FeaturedProperties />
       <About />
       <Services />
