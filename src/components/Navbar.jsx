@@ -139,6 +139,17 @@ export default function Navbar() {
             ))}
           </nav>
 
+          {/* Close button — below nav links */}
+          <button
+            onClick={() => setOpen(false)}
+            className={`mt-8 flex flex-col items-center gap-1 group ${open ? 'animate-fadeUp' : 'opacity-0'}`}
+            style={{ animationDelay: '0.42s', animationFillMode: 'both' }}
+            aria-label="Close menu"
+          >
+            <span className="block w-10 h-px bg-white/40 rotate-45 translate-y-[0.5px] group-hover:bg-gold transition-colors duration-300" />
+            <span className="block w-10 h-px bg-white/40 -rotate-45 -translate-y-[0.5px] group-hover:bg-gold transition-colors duration-300" />
+          </button>
+
           <div
             className={`absolute bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-12 ${
               open ? 'animate-fadeUp' : 'opacity-0'

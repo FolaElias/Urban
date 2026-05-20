@@ -214,6 +214,25 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* Right-side vertical prev/next controls */}
+      <div className="absolute right-24 top-1/2 -translate-y-1/2 z-20 flex flex-col items-center gap-5">
+        <button
+          onClick={() => goTo((current - 1 + slides.length) % slides.length)}
+          className="text-white/40 hover:text-white text-[9px] tracking-[0.3em] uppercase font-sans font-medium transition-colors duration-300"
+          style={{ writingMode: 'vertical-lr', transform: 'rotate(180deg)' }}
+        >
+          Prev
+        </button>
+        <div className="w-px h-10 bg-white/20" />
+        <button
+          onClick={() => goTo((current + 1) % slides.length)}
+          className="text-white/40 hover:text-white text-[9px] tracking-[0.3em] uppercase font-sans font-medium transition-colors duration-300"
+          style={{ writingMode: 'vertical-lr' }}
+        >
+          Next
+        </button>
+      </div>
+
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
         <span className="text-white/25 text-[9px] tracking-[0.5em] uppercase font-sans">Scroll</span>
@@ -222,13 +241,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Auto-progress bar at bottom edge */}
-      <div className="absolute bottom-0 left-0 right-0 z-20 h-[2px] bg-white/[0.07]">
-        <div
-          className="h-full bg-gold"
-          style={{ width: `${progress}%`, transition: `width ${TICK}ms linear` }}
-        />
-      </div>
+      {/* Progress bar hidden */}
     </section>
   )
 }
