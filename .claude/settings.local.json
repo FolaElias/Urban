@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:preview.themeforest.net)",
+      "Bash(ls \"c:\\\\Users\\\\Admin\\\\Desktop\\\\PROJECTS\\\\Urban\" 2>&1; ls \"c:\\\\Users\\\\Admin\\\\Desktop\\\\PROJECTS\" 2>&1)",
+      "Read(//c/Users/Admin/Desktop/PROJECTS/**)",
+      "Bash(Get-ChildItem \"c:\\\\Users\\\\Admin\\\\Desktop\\\\PROJECTS\\\\Urban\" -Recurse -Depth 3)",
+      "Bash(Select-Object FullName, Name)",
+      "WebSearch",
+      "WebFetch(domain:themeforest.net)"
+    ]
+  }
+}
